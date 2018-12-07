@@ -1,1 +1,15 @@
-docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli-v3:3.0.0 generate -i /local/Autopilot-OpenAPI/json/api.json -l php -o /local --git-user-id UniCourt --git-repo-id autopilot
+if [ "$?" -ne 1 ]
+then
+    tput setaf 1;
+    echo "Expecting language as command line argument"
+
+    tput setaf 2
+    echo "\nHere are the available languages"
+    docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli-v3:3.0.0 langs
+
+    tput setaf 9;
+    echo "\nExample: ./installer php"
+    exit;
+fi
+
+docker run --rm -v ${PWD}:/local swaggerapi/swagger-codegen-cli-v3:3.0.0 generate -i /local/Autopilot-OpenAPI/json/api.json -l $1 -o /local --git-user-id UniCourt --git-repo-id autopilot
