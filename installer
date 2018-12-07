@@ -16,6 +16,6 @@ docker run --rm -v ${PWD}:/local \
     swaggerapi/swagger-codegen-cli-v3:3.0.0 generate \
     -i /local/Autopilot-OpenAPI/json/api.json \
     -l $1 \
-    -o /local/out/$1 \
+    -o /local/$1 \
     --git-user-id UniCourt \
     --git-repo-id autopilot
