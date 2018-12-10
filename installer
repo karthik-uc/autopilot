@@ -12,10 +12,12 @@ then
     exit;
 fi
 
-docker run --rm -v ${PWD}:/local \
+docker run --rm -v ${PWD}:/local/SwaggerClient-php \
     swaggerapi/swagger-codegen-cli-v3:3.0.0 generate \
-    -i /local/Autopilot-OpenAPI/json/api.json \
-    -l $1 \
-    -o /local/$1 \
+    --input-spec /local/SwaggerClient-php/Autopilot-OpenAPI/json/api.json \
+    --lang $1 \
+    --output /local \
     --git-user-id UniCourt \
     --git-repo-id autopilot
+
+sudo chown -R $USER:$USER .
