@@ -21,11 +21,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/autopilot/api.git"
+      "url": "https://github.com/unicourt/autopilot.git"
     }
   ],
   "require": {
-    "autopilot/api": "*@dev"
+    "unicourt/autopilot": "*@dev"
   }
 }
 ```
