@@ -1,0 +1,13 @@
+{
+  "name": "unicourt/autopilot-integration",
+  "version": "1.0.0",
+  "repositories": [
+    {
+      "type": "path",
+      "url": "AutoPilot/Api"
+    }
+  ],
+  "require": {
+    "autopilot/api": "1.0.0"
+  }
+}
