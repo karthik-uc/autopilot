@@ -9,8 +9,6 @@ servers:
 security:
   - autopilotapikey: []
 tags:
-  - name: contact-add-or-update
-    description: Operations performed to add or update a contact in AutoPilot
   - name: contact-operation
     description: Operation performed specific to a contact
   - name: contact-subscription
@@ -28,6 +26,87 @@ tags:
   - name: triggers
     description: Operations relating to triggers
 paths:
+  '/contact':
+    post:
+      tags:
+        - contact-operation
+      summary: Create or update a contact
+      description: Create or update a contact
+      operationId: createOrUpdateContact
+      requestBody:
+        description: Values needed to be sent to AutoPilot
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddContact'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+  '/contacts':
+    post:
+      tags:
+        - contact-operation
+      summary: Create or update multiple contact
+      description: Create or update multiple contact
+      operationId: createOrUpdateContacts
+      requestBody:
+        description: Values needed to be sent to AutoPilot
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+    get:
+      tags:
+        - contact-operation
+      summary: Get first set of contacts present in AutoPilot
+      description: Get first set of contacts present in AutoPilot
+      operationId: getFirstContactSet
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: No autopilot key was provided
+
+  '/contacts/{bookmark}':
+    get:
+      tags:
+        - contact-operation
+      summary: Get next set of contacts present in AutoPilot
+      description: Get next set of contacts present in AutoPilot
+      operationId: getNextContactSet
+      parameters:
+        - name: bookmark
+          in: path
+          description: Bookmark is used to access next group
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+        '400':
+          description: No autopilot key was provided
   '/contact/{contact-email}':
     get:
       tags:
@@ -85,49 +164,6 @@ paths:
         '500':
           description: Internal Server Error
 
-  '/contacts':
-    get:
-      tags:
-        - contact-operation
-      summary: Get first set of contacts present in AutoPilot
-      description: Get first set of contacts present in AutoPilot
-      operationId: getFirstContactSet
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-        '400':
-          description: No autopilot key was provided
-
-  '/contacts/{bookmark}':
-    get:
-      tags:
-        - contact-operation
-      summary: Get next set of contacts present in AutoPilot
-      description: Get next set of contacts present in AutoPilot
-      operationId: getNextContactSet
-      parameters:
-        - name: bookmark
-          in: path
-          description: Bookmark is used to access next group
-          required: true
-          style: simple
-          explode: false
-          schema:
-            type: string
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
-        '400':
-          description: No autopilot key was provided
-
   '/contact/{contact-email}/unsubscribe':
     post:
       tags:
@@ -155,26 +191,7 @@ paths:
           description: Your request was throttled
         '500':
           description: Internal Server Error
-  /contact:
-    post:
-      tags:
-        - contact-add-or-update
-      summary: Create or update a contact
-      description: Create or update a contact
-      operationId: createOrUpdateContact
-      requestBody:
-        description: Values needed to be sent to AutoPilot
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/AddContact'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                type: object
+
   /lists:
     get:
       tags:
