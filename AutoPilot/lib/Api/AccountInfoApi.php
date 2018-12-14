@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  AutoPilot\
+ * @package  AutoPilot
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace AutoPilot\\Api;
+namespace AutoPilot\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use AutoPilot\\ApiException;
-use AutoPilot\\Configuration;
-use AutoPilot\\HeaderSelector;
-use AutoPilot\\ObjectSerializer;
+use AutoPilot\ApiException;
+use AutoPilot\Configuration;
+use AutoPilot\HeaderSelector;
+use AutoPilot\ObjectSerializer;
 
 /**
  * AccountInfoApi Class Doc Comment
  *
  * @category Class
- * @package  AutoPilot\
+ * @package  AutoPilot
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -91,7 +91,7 @@ class AccountInfoApi
      * Get the Account Information from AutoPilot
 *
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -107,7 +107,7 @@ class AccountInfoApi
      * Get the Account Information from AutoPilot
 *
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */

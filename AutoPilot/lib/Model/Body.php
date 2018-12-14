@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  AutoPilot\
+ * @package  AutoPilot
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace AutoPilot\\Model;
+namespace AutoPilot\Model;
 
 use \ArrayAccess;
-use \AutoPilot\\ObjectSerializer;
+use \AutoPilot\ObjectSerializer;
 
 /**
  * Body Class Doc Comment
  *
  * @category Class
- * @package  AutoPilot\
+ * @package  AutoPilot
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
