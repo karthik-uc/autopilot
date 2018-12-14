@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  AutoPilot\
+ * @package  AutoPilot
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace AutoPilot\\Api;
+namespace AutoPilot\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -33,16 +33,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use AutoPilot\\ApiException;
-use AutoPilot\\Configuration;
-use AutoPilot\\HeaderSelector;
-use AutoPilot\\ObjectSerializer;
+use AutoPilot\ApiException;
+use AutoPilot\Configuration;
+use AutoPilot\HeaderSelector;
+use AutoPilot\ObjectSerializer;
 
 /**
  * ListOperationApi Class Doc Comment
  *
  * @category Class
- * @package  AutoPilot\
+ * @package  AutoPilot
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,7 +93,7 @@ class ListOperationApi
 * @param  string $list_id List Id (required)
 * @param  string $contact_email Contact email address (required)
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -110,7 +110,7 @@ class ListOperationApi
 * @param  string $list_id List Id (required)
 * @param  string $contact_email Contact email address (required)
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -343,7 +343,7 @@ $defaultHeaders = [];
 * @param  string $list_id List Id (required)
 * @param  string $contact_email Contact email address (required)
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -361,7 +361,7 @@ $defaultHeaders = [];
 * @param  string $list_id List Id (required)
 * @param  string $contact_email Contact email address (required)
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -628,7 +628,7 @@ $defaultHeaders = [];
      * Returns all list present in AutoPilot
 *
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -644,7 +644,7 @@ $defaultHeaders = [];
      * Returns all list present in AutoPilot
 *
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -878,7 +878,7 @@ $defaultHeaders = [];
 *
 * @param  string $list_id List Id (required)
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -895,7 +895,7 @@ $defaultHeaders = [];
 *
 * @param  string $list_id List Id (required)
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1147,7 +1147,7 @@ $defaultHeaders = [];
 * @param  string $list_id List Id (required)
 * @param  string $bookmark Bookmark (required)
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1165,7 +1165,7 @@ $defaultHeaders = [];
 * @param  string $list_id List Id (required)
 * @param  string $bookmark Bookmark (required)
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1434,7 +1434,7 @@ $defaultHeaders = [];
 * @param  string $list_id List Id (required)
 * @param  string $contact_email Identify a contact in AutoPilot (required)
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1451,7 +1451,7 @@ $defaultHeaders = [];
 * @param  string $list_id List Id (required)
 * @param  string $contact_email Identify a contact in AutoPilot (required)
 *
-     * @throws \AutoPilot\\ApiException on non-2xx response
+     * @throws \AutoPilot\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

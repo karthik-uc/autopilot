@@ -1,4 +1,4 @@
-# AutoPilot\\ListOperationApi
+# AutoPilot\ListOperationApi
 
 All URIs are relative to *https://private-anon-b40d4dece5-autopilot.apiary-mock.com/v1*
 
@@ -21,11 +21,11 @@ Add contact to list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: autopilotapikey
-$config = AutoPilot\\Configuration::getDefaultConfiguration()->setApiKey('autopilotapikey', 'YOUR_API_KEY');
+$config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKey('autopilotapikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = AutoPilot\\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
+// $config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
 
-$apiInstance = new AutoPilot\\Api\ListOperationApi(
+$apiInstance = new AutoPilot\Api\ListOperationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -74,11 +74,11 @@ Check if contact is present in AutoPilot
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: autopilotapikey
-$config = AutoPilot\\Configuration::getDefaultConfiguration()->setApiKey('autopilotapikey', 'YOUR_API_KEY');
+$config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKey('autopilotapikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = AutoPilot\\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
+// $config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
 
-$apiInstance = new AutoPilot\\Api\ListOperationApi(
+$apiInstance = new AutoPilot\Api\ListOperationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -128,11 +128,11 @@ Returns all list present in AutoPilot
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: autopilotapikey
-$config = AutoPilot\\Configuration::getDefaultConfiguration()->setApiKey('autopilotapikey', 'YOUR_API_KEY');
+$config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKey('autopilotapikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = AutoPilot\\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
+// $config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
 
-$apiInstance = new AutoPilot\\Api\ListOperationApi(
+$apiInstance = new AutoPilot\Api\ListOperationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -178,11 +178,11 @@ Get first set of contacts present in a list from AutoPilot
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: autopilotapikey
-$config = AutoPilot\\Configuration::getDefaultConfiguration()->setApiKey('autopilotapikey', 'YOUR_API_KEY');
+$config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKey('autopilotapikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = AutoPilot\\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
+// $config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
 
-$apiInstance = new AutoPilot\\Api\ListOperationApi(
+$apiInstance = new AutoPilot\Api\ListOperationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -232,11 +232,11 @@ Get next set of contacts present in a list from AutoPilot
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: autopilotapikey
-$config = AutoPilot\\Configuration::getDefaultConfiguration()->setApiKey('autopilotapikey', 'YOUR_API_KEY');
+$config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKey('autopilotapikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = AutoPilot\\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
+// $config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
 
-$apiInstance = new AutoPilot\\Api\ListOperationApi(
+$apiInstance = new AutoPilot\Api\ListOperationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -288,11 +288,11 @@ This API will remove this contact from a list
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: autopilotapikey
-$config = AutoPilot\\Configuration::getDefaultConfiguration()->setApiKey('autopilotapikey', 'YOUR_API_KEY');
+$config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKey('autopilotapikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = AutoPilot\\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
+// $config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
 
-$apiInstance = new AutoPilot\\Api\ListOperationApi(
+$apiInstance = new AutoPilot\Api\ListOperationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
