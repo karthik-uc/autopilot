@@ -17,24 +17,8 @@
   ],
   "tags": [
     {
-      "name": "contact-operation",
-      "description": "Operation performed specific to a contact"
-    },
-    {
-      "name": "contact-subscription",
-      "description": "Operations performed to either subscribe a contact or unsubscribe"
-    },
-    {
-      "name": "list-operation",
-      "description": "Operations performed on list in AutoPilot"
-    },
-    {
-      "name": "account-info",
-      "description": "Operations performed to retrive account information"
-    },
-    {
-      "name": "custom-fields",
-      "description": "Operations performed to retrive all Custom Fields"
+      "name": "autopilot",
+      "description": "Operations relating to create update or delete"
     },
     {
       "name": "smart-segment",
@@ -53,7 +37,7 @@
     "/contact": {
       "post": {
         "tags": [
-          "contact-operation"
+          "autopilot"
         ],
         "summary": "Create or update a contact",
         "description": "Create or update a contact",
@@ -85,7 +69,7 @@
     "/contacts": {
       "post": {
         "tags": [
-          "contact-operation"
+          "autopilot"
         ],
         "summary": "Create or update multiple contact",
         "description": "Create or update multiple contact",
@@ -115,7 +99,7 @@
       },
       "get": {
         "tags": [
-          "contact-operation"
+          "autopilot"
         ],
         "summary": "Get first set of contacts present in AutoPilot",
         "description": "Get first set of contacts present in AutoPilot",
@@ -140,7 +124,7 @@
     "/contacts/{bookmark}": {
       "get": {
         "tags": [
-          "contact-operation"
+          "autopilot"
         ],
         "summary": "Get next set of contacts present in AutoPilot",
         "description": "Get next set of contacts present in AutoPilot",
@@ -178,7 +162,7 @@
     "/contact/{contact-email}": {
       "get": {
         "tags": [
-          "contact-operation"
+          "autopilot"
         ],
         "summary": "Returns contact information from AutoPilot",
         "operationId": "getContactInfo",
@@ -222,7 +206,7 @@
       },
       "delete": {
         "tags": [
-          "contact-operation"
+          "autopilot"
         ],
         "summary": "Delete a contact from AutoPilot",
         "description": "This API will remove this contact from AutoPilot",
@@ -262,7 +246,7 @@
     "/contact/{contact-email}/unsubscribe": {
       "post": {
         "tags": [
-          "contact-subscription"
+          "autopilot"
         ],
         "summary": "Unsubscribe a contact in AutoPilot",
         "description": "Unsubscribe a contact in AutoPilot",
@@ -302,7 +286,7 @@
     "/lists": {
       "get": {
         "tags": [
-          "list-operation"
+          "autopilot"
         ],
         "summary": "Returns all list present in AutoPilot",
         "operationId": "getAllList",
@@ -335,7 +319,7 @@
     "/list/{list_id}/contact/{contact_email}": {
       "get": {
         "tags": [
-          "list-operation"
+          "autopilot"
         ],
         "summary": "Check if contact is present in AutoPilot",
         "operationId": "checkContactInList",
@@ -390,7 +374,7 @@
       },
       "post": {
         "tags": [
-          "list-operation"
+          "autopilot"
         ],
         "summary": "Add contact to list",
         "operationId": "addToList",
@@ -441,7 +425,7 @@
       },
       "delete": {
         "tags": [
-          "list-operation"
+          "autopilot"
         ],
         "summary": "Remove a contact from a list in AutoPilot",
         "description": "This API will remove this contact from a list",
@@ -495,7 +479,7 @@
     "/list/{list_id}/contacts": {
       "get": {
         "tags": [
-          "list-operation"
+          "autopilot"
         ],
         "summary": "Get first set of contacts present in a list from AutoPilot",
         "description": "Get first set of contacts present in a list from AutoPilot",
@@ -530,7 +514,7 @@
     "/list/{list_id}/contacts/{bookmark}": {
       "get": {
         "tags": [
-          "list-operation"
+          "autopilot"
         ],
         "summary": "Get next set of contacts present in a list from AutoPilot",
         "description": "Get next set of contacts present in a list from AutoPilot",
@@ -576,7 +560,7 @@
     "/account": {
       "get": {
         "tags": [
-          "account-info"
+          "autopilot"
         ],
         "summary": "Get the Account Information from AutoPilot",
         "operationId": "getAccount",
@@ -597,7 +581,7 @@
     "/contacts/custom_fields": {
       "get": {
         "tags": [
-          "custom-fields"
+          "autopilot"
         ],
         "summary": "Get custom fields present in AutoPilot",
         "operationId": "getCustomFields",
