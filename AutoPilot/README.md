@@ -62,18 +62,19 @@ $config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKey('autopil
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = AutoPilot\Configuration::getDefaultConfiguration()->setApiKeyPrefix('autopilotapikey', 'Bearer');
 
-$apiInstance = new AutoPilot\Api\AccountInfoApi(
+$apiInstance = new AutoPilot\Api\AutopilotApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
+$list_id = "list_id_example"; // string | List Id
+$contact_email = "contact_email_example"; // string | Contact email address
 
 try {
-    $result = $apiInstance->getAccount();
-    print_r($result);
+    $apiInstance->addToList($list_id, $contact_email);
 } catch (Exception $e) {
-    echo 'Exception when calling AccountInfoApi->getAccount: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AutopilotApi->addToList: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -84,25 +85,25 @@ All URIs are relative to *https://private-anon-b40d4dece5-autopilot.apiary-mock.
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AccountInfoApi* | [**getAccount**](docs/Api/AccountInfoApi.md#getaccount) | **GET** /account | Get the Account Information from AutoPilot
-*ContactOperationApi* | [**createOrUpdateContact**](docs/Api/ContactOperationApi.md#createorupdatecontact) | **POST** /contact | Create or update a contact
-*ContactOperationApi* | [**createOrUpdateContacts**](docs/Api/ContactOperationApi.md#createorupdatecontacts) | **POST** /contacts | Create or update multiple contact
-*ContactOperationApi* | [**deleteContact**](docs/Api/ContactOperationApi.md#deletecontact) | **DELETE** /contact/{contact-email} | Delete a contact from AutoPilot
-*ContactOperationApi* | [**getContactInfo**](docs/Api/ContactOperationApi.md#getcontactinfo) | **GET** /contact/{contact-email} | Returns contact information from AutoPilot
-*ContactOperationApi* | [**getFirstContactSet**](docs/Api/ContactOperationApi.md#getfirstcontactset) | **GET** /contacts | Get first set of contacts present in AutoPilot
-*ContactOperationApi* | [**getNextContactSet**](docs/Api/ContactOperationApi.md#getnextcontactset) | **GET** /contacts/{bookmark} | Get next set of contacts present in AutoPilot
-*ContactSubscriptionApi* | [**unsubscribeContact**](docs/Api/ContactSubscriptionApi.md#unsubscribecontact) | **POST** /contact/{contact-email}/unsubscribe | Unsubscribe a contact in AutoPilot
-*CustomFieldsApi* | [**getCustomFields**](docs/Api/CustomFieldsApi.md#getcustomfields) | **GET** /contacts/custom_fields | Get custom fields present in AutoPilot
+*AutopilotApi* | [**addToList**](docs/Api/AutopilotApi.md#addtolist) | **POST** /list/{list_id}/contact/{contact_email} | Add contact to list
+*AutopilotApi* | [**checkContactInList**](docs/Api/AutopilotApi.md#checkcontactinlist) | **GET** /list/{list_id}/contact/{contact_email} | Check if contact is present in AutoPilot
+*AutopilotApi* | [**createOrUpdateContact**](docs/Api/AutopilotApi.md#createorupdatecontact) | **POST** /contact | Create or update a contact
+*AutopilotApi* | [**createOrUpdateContacts**](docs/Api/AutopilotApi.md#createorupdatecontacts) | **POST** /contacts | Create or update multiple contact
+*AutopilotApi* | [**deleteContact**](docs/Api/AutopilotApi.md#deletecontact) | **DELETE** /contact/{contact-email} | Delete a contact from AutoPilot
+*AutopilotApi* | [**getAccount**](docs/Api/AutopilotApi.md#getaccount) | **GET** /account | Get the Account Information from AutoPilot
+*AutopilotApi* | [**getAllList**](docs/Api/AutopilotApi.md#getalllist) | **GET** /lists | Returns all list present in AutoPilot
+*AutopilotApi* | [**getContactInfo**](docs/Api/AutopilotApi.md#getcontactinfo) | **GET** /contact/{contact-email} | Returns contact information from AutoPilot
+*AutopilotApi* | [**getCustomFields**](docs/Api/AutopilotApi.md#getcustomfields) | **GET** /contacts/custom_fields | Get custom fields present in AutoPilot
+*AutopilotApi* | [**getFirstContactSet**](docs/Api/AutopilotApi.md#getfirstcontactset) | **GET** /contacts | Get first set of contacts present in AutoPilot
+*AutopilotApi* | [**getFirstContactSetInList**](docs/Api/AutopilotApi.md#getfirstcontactsetinlist) | **GET** /list/{list_id}/contacts | Get first set of contacts present in a list from AutoPilot
+*AutopilotApi* | [**getNextContactSet**](docs/Api/AutopilotApi.md#getnextcontactset) | **GET** /contacts/{bookmark} | Get next set of contacts present in AutoPilot
+*AutopilotApi* | [**getNextContactSetInList**](docs/Api/AutopilotApi.md#getnextcontactsetinlist) | **GET** /list/{list_id}/contacts/{bookmark} | Get next set of contacts present in a list from AutoPilot
+*AutopilotApi* | [**removeFromList**](docs/Api/AutopilotApi.md#removefromlist) | **DELETE** /list/{list_id}/contact/{contact_email} | Remove a contact from a list in AutoPilot
+*AutopilotApi* | [**unsubscribeContact**](docs/Api/AutopilotApi.md#unsubscribecontact) | **POST** /contact/{contact-email}/unsubscribe | Unsubscribe a contact in AutoPilot
 *HooksApi* | [**deleteHooks**](docs/Api/HooksApi.md#deletehooks) | **DELETE** /hooks | delete all hooks
 *HooksApi* | [**getHooks**](docs/Api/HooksApi.md#gethooks) | **GET** /hooks | get all list of all hooks present in AutoPilot
 *HooksApi* | [**registerHooks**](docs/Api/HooksApi.md#registerhooks) | **POST** /hook | register a hook
 *HooksApi* | [**unregisterHook**](docs/Api/HooksApi.md#unregisterhook) | **DELETE** /hook/{hook_id} | Unregister a hook
-*ListOperationApi* | [**addToList**](docs/Api/ListOperationApi.md#addtolist) | **POST** /list/{list_id}/contact/{contact_email} | Add contact to list
-*ListOperationApi* | [**checkContactInList**](docs/Api/ListOperationApi.md#checkcontactinlist) | **GET** /list/{list_id}/contact/{contact_email} | Check if contact is present in AutoPilot
-*ListOperationApi* | [**getAllList**](docs/Api/ListOperationApi.md#getalllist) | **GET** /lists | Returns all list present in AutoPilot
-*ListOperationApi* | [**getFirstContactSetInList**](docs/Api/ListOperationApi.md#getfirstcontactsetinlist) | **GET** /list/{list_id}/contacts | Get first set of contacts present in a list from AutoPilot
-*ListOperationApi* | [**getNextContactSetInList**](docs/Api/ListOperationApi.md#getnextcontactsetinlist) | **GET** /list/{list_id}/contacts/{bookmark} | Get next set of contacts present in a list from AutoPilot
-*ListOperationApi* | [**removeFromList**](docs/Api/ListOperationApi.md#removefromlist) | **DELETE** /list/{list_id}/contact/{contact_email} | Remove a contact from a list in AutoPilot
 *SmartSegmentApi* | [**getSegment**](docs/Api/SmartSegmentApi.md#getsegment) | **GET** /smart_segments | get all list present in smart segment
 *TriggersApi* | [**addTriggers**](docs/Api/TriggersApi.md#addtriggers) | **POST** /trigger/{trigger_id}/contact/{contact_email} | Add a contact to journey
 *TriggersApi* | [**getTriggers**](docs/Api/TriggersApi.md#gettriggers) | **GET** /triggers | get all list of all journey with API triggers

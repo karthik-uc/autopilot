@@ -1,10 +1,10 @@
 <?php
 /**
- * ContactOperationApiTest
+ * AutopilotApiTest
  * PHP version 5
  *
  * @category Class
- * @package  AutoPilot\
+ * @package  AutoPilot
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,21 +25,21 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace AutoPilot\;
+namespace AutoPilot;
 
 use {{invokerPackage}}\Configuration;
 use {{invokerPackage}}\ApiException;
 use {{invokerPackage}}\ObjectSerializer;
 
 /**
- * ContactOperationApiTest Class Doc Comment
+ * AutopilotApiTest Class Doc Comment
  *
  * @category Class
- * @package  AutoPilot\
+ * @package  AutoPilot
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ContactOperationApiTest extends \PHPUnit_Framework_TestCase
+class AutopilotApiTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -67,6 +67,26 @@ class ContactOperationApiTest extends \PHPUnit_Framework_TestCase
      * Clean up after running all test cases
      */
     public static function tearDownAfterClass()
+    {
+    }
+
+    /**
+     * Test case for addToList
+     *
+     * Add contact to list.
+     *
+     */
+    public function testAddToList()
+    {
+    }
+
+    /**
+     * Test case for checkContactInList
+     *
+     * Check if contact is present in AutoPilot.
+     *
+     */
+    public function testCheckContactInList()
     {
     }
 
@@ -101,12 +121,42 @@ class ContactOperationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getAccount
+     *
+     * Get the Account Information from AutoPilot.
+     *
+     */
+    public function testGetAccount()
+    {
+    }
+
+    /**
+     * Test case for getAllList
+     *
+     * Returns all list present in AutoPilot.
+     *
+     */
+    public function testGetAllList()
+    {
+    }
+
+    /**
      * Test case for getContactInfo
      *
      * Returns contact information from AutoPilot.
      *
      */
     public function testGetContactInfo()
+    {
+    }
+
+    /**
+     * Test case for getCustomFields
+     *
+     * Get custom fields present in AutoPilot.
+     *
+     */
+    public function testGetCustomFields()
     {
     }
 
@@ -121,12 +171,52 @@ class ContactOperationApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for getFirstContactSetInList
+     *
+     * Get first set of contacts present in a list from AutoPilot.
+     *
+     */
+    public function testGetFirstContactSetInList()
+    {
+    }
+
+    /**
      * Test case for getNextContactSet
      *
      * Get next set of contacts present in AutoPilot.
      *
      */
     public function testGetNextContactSet()
+    {
+    }
+
+    /**
+     * Test case for getNextContactSetInList
+     *
+     * Get next set of contacts present in a list from AutoPilot.
+     *
+     */
+    public function testGetNextContactSetInList()
+    {
+    }
+
+    /**
+     * Test case for removeFromList
+     *
+     * Remove a contact from a list in AutoPilot.
+     *
+     */
+    public function testRemoveFromList()
+    {
+    }
+
+    /**
+     * Test case for unsubscribeContact
+     *
+     * Unsubscribe a contact in AutoPilot.
+     *
+     */
+    public function testUnsubscribeContact()
     {
     }
 }

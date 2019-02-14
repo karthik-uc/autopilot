@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  AutoPilot\
+ * @package  AutoPilot
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -25,7 +25,7 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace AutoPilot\;
+namespace AutoPilot;
 
 use {{invokerPackage}}\Configuration;
 use {{invokerPackage}}\ApiException;
@@ -35,7 +35,7 @@ use {{invokerPackage}}\ObjectSerializer;
  * SmartSegmentApiTest Class Doc Comment
  *
  * @category Class
- * @package  AutoPilot\
+ * @package  AutoPilot
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
